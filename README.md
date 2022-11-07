@@ -179,6 +179,7 @@ public class DOM {
 
 
 SAX:
+
 Expliqueu els aspectes fonamentals de SAX:
   Què és.
       SAX is an XML parsing standard.Unlike DOM, it processes information by events
