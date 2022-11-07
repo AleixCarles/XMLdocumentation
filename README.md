@@ -197,42 +197,43 @@ XPath
 Què és Xpath?
 XPath is a language that allows you to query an XML document in a simple way.
 
-    • Què puc fer amb Xpath?
+   • Què puc fer amb Xpath?
 Find information from an XML document with filters using formulas
     • Posa un exemple de com consultar els CDs anteriors a 1990.
-import java.io.File;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathFactory;
+    import java.io.File;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
+    import javax.xml.parsers.DocumentBuilder;
+    import javax.xml.parsers.DocumentBuilderFactory;
+    import javax.xml.xpath.XPath;
+    import javax.xml.xpath.XPathConstants;
+    import javax.xml.xpath.XPathFactory;
 
-public class PruebaXPath {
-    public static void main(String[] args) throws Exception {
-        // La expresion xpath de busqueda
-        String xPathExpression = "//CATALOG/CD [YEAR < 1990]";
+    import org.w3c.dom.Document;
+    import org.w3c.dom.NodeList;
 
-        // Carga del documento xml
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factory.newDocumentBuilder();
-        Document documento = builder.parse(new File("cd_catalog.xml"));
+    public class PruebaXPath {
+        public static void main(String[] args) throws Exception {
+            // La expresion xpath de busqueda
+            String xPathExpression = "//CATALOG/CD [YEAR < 1990]";
 
-        // Preparación de xpath
-        XPath xpath = XPathFactory.newInstance().newXPath();
+            // Carga del documento xml
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document documento = builder.parse(new File("cd_catalog.xml"));
 
-        // Consultas
-        NodeList nodos = (NodeList) xpath.evaluate(xPathExpression, documento, XPathConstants.NODESET);
+            // Preparación de xpath
+            XPath xpath = XPathFactory.newInstance().newXPath();
 
-        for (int i=0;i<nodos.getLength();i++){
-            System.out.println(nodos.item(i).getNodeName()+" : " +
-                    nodos.item(i).getTextContent());
+            // Consultas
+            NodeList nodos = (NodeList) xpath.evaluate(xPathExpression, documento, XPathConstants.NODESET);
+
+            for (int i=0;i<nodos.getLength();i++){
+                System.out.println(nodos.item(i).getNodeName()+" : " +
+                        nodos.item(i).getTextContent());
+            }
         }
     }
-}
 
 
 ![image](https://user-images.githubusercontent.com/91152783/200332011-f10852aa-58ef-4979-8fb3-da60ac67764a.png)
