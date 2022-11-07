@@ -94,22 +94,23 @@ Codi d'exemple de lectura des de fitxer?
 
 
 Codi d'exemple d'escriptura a fitxer?
-import org.w3c.dom.Attr;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-import java.io.File;
+    import org.w3c.dom.Attr;
+    import org.w3c.dom.Document;
+    import org.w3c.dom.Element;
 
-public class DOM {
-    public static void main(String[] args) {
+    import javax.xml.parsers.DocumentBuilder;
+    import javax.xml.parsers.DocumentBuilderFactory;
+    import javax.xml.transform.Transformer;
+    import javax.xml.transform.TransformerFactory;
+    import javax.xml.transform.dom.DOMSource;
+    import javax.xml.transform.stream.StreamResult;
+    import java.io.File;
 
-        try {
+    public class DOM {
+        public static void main(String[] args) {
+
+            try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document doc = db.newDocument();
