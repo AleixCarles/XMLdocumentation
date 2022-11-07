@@ -52,7 +52,7 @@ Codi d'exemple de lectura des de fitxer?
 
         File file = new File("cd_catalog.xml");
 
-        // LECTURA DE FITXER
+        
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
