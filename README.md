@@ -34,7 +34,9 @@ Document
 NodeList
 
 Excepcions que s'han de controlar?
+
 Exception
+
 Codi d'exemple de lectura des de fitxer?
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
