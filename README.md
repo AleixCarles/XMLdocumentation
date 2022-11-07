@@ -52,7 +52,7 @@ Codi d'exemple de lectura des de fitxer?
 
         File file = new File("cd_catalog.xml");
 
-        
+                // LECTURA DE FITXER
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -115,20 +115,20 @@ Codi d'exemple d'escriptura a fitxer?
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document doc = db.newDocument();
 
-            
+                //ROOT ELEMENT
             Element rootElement = doc.createElement("catalog");
             doc.appendChild(rootElement);
 
-           
+                 //CD ELEMENT
             Element cdElement = doc.createElement("cd");
             rootElement.appendChild(cdElement);
 
-           
+                 //CD ELEMENT ATTRIBUTE
             Attr cdIdAttr = doc.createAttribute("id");
             cdIdAttr.setValue("1");
             cdElement.setAttributeNode(cdIdAttr);
 
-          
+                      //CD CHILD ELEMENTS
             Element titleElement = doc.createElement("title");
             titleElement.appendChild(doc.createTextNode("CD"));
             cdElement.appendChild(titleElement);
