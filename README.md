@@ -10,18 +10,9 @@ It is a programming interface that allows us to create, change or delete element
 
 Com funciona?
 The DOM is a programming API for documents. It has a great similarity with the structure of the document it models. For example, consider this table, take an HTML document:
-<TABLE>
-<TBODY>
-<TR>
-<TD>Text1</TD>
-<TD>Text2</TD>
-</TR>
-<TR>
-<TD>Text3</TD>
-<TD>Text4</TD>
-</TR>
-</TBODY>
-</TABLE>
+
+![image](https://user-images.githubusercontent.com/91152783/200332532-240fe9a9-0f3d-491d-93fd-dcc1b65dc3b2.png)
+
 
 The DOM represents this table like this:
 
